@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>基于SpringMVC框架的文件上传</title>
+</head>
+<body>
+<form id="form-upload">
+    <p>请选择您要上传的文件:</p>
+    <p><input type="file" name="file"></p>
+    <p><input id="btn-submit" type="button" value="上传"></p>
+</form>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+    $('#btn-submit').click(function () {
+        //alert('准备提交上传')
+        $.ajax({
+            url: '/upload',
+            data: new FormData($('#form-upload')[0]),
+            contentType: false,
+            processData: false,
+            type: 'post',
+            success: function (result) {
+                alert(result)
+            }
+        })
+    });
+
+
+
+</script>
+</body>
+</html>
