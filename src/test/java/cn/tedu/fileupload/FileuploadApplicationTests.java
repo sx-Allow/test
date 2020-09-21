@@ -5,7 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class FileuploadApplicationTests {
-
+//测试类
     @Test
     void contextLoads() {
     }
